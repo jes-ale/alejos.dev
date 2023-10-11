@@ -3,14 +3,15 @@ import { Icon } from '@iconify/vue'
 const { t } = useI18n()
 </script>
 <template>
-  <main class="relative flex flex-col no-scrollbar overflow-y-scroll h-screen w-screen text-black dark:text-white text-sm bg-neutral-100
+  <main class="relative flex flex-col no-scrollbar overflow-y-scroll h-screen w-screen text-black text-sm bg-neutral-100
       font-sans subpixel-antialiased slashed-zero diagonal-fractions">
     <Header class="w-screen h-auto" />
     <div class="flex w-full h-full">
       <!-- Slide in menu start -->
-      <SlideInPanel class="h-full w-auto" position="left">
+      <SlideInPanel class="absolute h-full w-auto" position="left">
         <template #isOpenButton>
           <div class="flex items-center justify-end w-full ">
+            {{ t('Toggle') }}
             <Icon class="transform" icon="carbon:caret-left" />
           </div>
         </template>
@@ -18,8 +19,8 @@ const { t } = useI18n()
           <Icon icon="carbon:caret-right" />
         </template>
         <template #content>
-          <!-- <UserCard /> -->
-          <!-- <SideMenu /> -->
+          <UserCard />
+          <SideMenu />
         </template>
       </SlideInPanel>
       <!-- Main panel start -->
@@ -28,11 +29,8 @@ const { t } = useI18n()
       </section>
     </div>
     <!-- Floating button group start -->
-    <section class="absolute bottom-0 right-0 p-1">
-      <div
-        class="bg-light-200 dark:bg-dark-200 border border-black dark:border-white rounded  h-12 w-12 flex justify-center items-center cursor-pointer bg-light-900 dark:bg-dark-900">
-        <Icon icon="carbon:caret-up" />
-      </div>
+    <section class="absolute bottom-0 right-0 p-1 z-10 w-auto h-auto">
+      <Floating />
     </section>
   </main>
 </template>

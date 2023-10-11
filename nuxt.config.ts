@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/motion/nuxt'
   ],
+  css: [
+    "/assets/global.css",
+  ],
   runtimeConfig: {
     public: {
       apiUrl: process.env.NUXT_API_URL,

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Sans';
+  src: url('ComicShannsMonoNerdFontMono-Regular.otf') format('opentype'),
+       url('ComicShannsMonoNerdFontMono-Regular.woff') format('woff'),
+       url('ComicShannsMonoNerdFontMono-Regular.woff2') format('woff2');
+}
+
