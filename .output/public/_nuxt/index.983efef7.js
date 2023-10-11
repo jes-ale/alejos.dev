@@ -1,0 +1,1 @@
+import{_ as t}from"./nuxt-layout.ef213a29.js";import{d as o,k as a,m as n,q as s,j as _,l as c}from"./entry.290d17cd.js";const l=c("div",{class:"flex w-full justify-center"}," Welcome ",-1),i=o({__name:"index",setup(r){return(m,u)=>{const e=t;return _(),a("div",null,[n(e,{name:"default"},{default:s(()=>[l]),_:1})])}}});export{i as default};
